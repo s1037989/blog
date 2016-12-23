@@ -1,0 +1,4 @@
+% layout 'blog', email => $user->{email};
+<h2><%= $user->{email} %></h2>
+<p><%= $user->{name} %></p>
+%= link_to 'Edit' => edit_user => {id => $user->{id}}

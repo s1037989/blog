@@ -1,0 +1,11 @@
+%= form_for $target => begin
+  %= label_for email => 'Email'
+  <br>
+  %= text_field email => $user->{email}
+  <br>
+  %= label_for name => 'Name'
+  <br>
+  %= text_area name => $user->{name}
+  <br>
+  %= submit_button $caption
+% end

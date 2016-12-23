@@ -4,6 +4,12 @@ create table if not exists posts (
   title text,
   body  text
 );
+create table if not exists users (
+  id    serial primary key,
+  email text,
+  name  text
+);
 
 -- 1 down
 drop table if exists posts;
+drop table if exists users;

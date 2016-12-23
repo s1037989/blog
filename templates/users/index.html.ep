@@ -1,0 +1,8 @@
+% layout 'blog', title => 'Blog';
+% for my $user (@$users) {
+  <p>
+    <h2><%= link_to $user->{email} => show_user => {id => $user->{id}} %></h2>
+    %= $user->{name}
+  </p>
+% }
+%= link_to 'New user' => 'create_user'

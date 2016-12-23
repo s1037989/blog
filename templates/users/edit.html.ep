@@ -1,0 +1,6 @@
+% layout 'blog', title => 'Edit user';
+<h2>Edit user</h2>
+%= include 'users/_form', caption => 'Update', target => 'update_user'
+%= form_for remove_user => {id => $user->{id}} => begin
+  %= submit_button 'Remove'
+% end
