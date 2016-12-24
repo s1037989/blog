@@ -13,7 +13,7 @@ sub startup {
   $self->plugin('Config');
   $self->secrets($self->config('secrets'));
   $self->plugin('ACME');
-  $self->plugin("OAuth2Accounts" => {
+  $self->plugin("OAuth2Store" => {
     on_logout => '/',
     on_success => 'index',
     on_error => 'error',

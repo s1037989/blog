@@ -13,6 +13,14 @@
     </style>
   </head>
   <body>
+    <div>
+    % if ( session 'id' ) {
+      Welcome, <%= users->find(session 'id')->{name} %>
+      <%= link_to Logout => 'logout' %>
+    % } else {
+      <%= link_to 'Login with Google' => '/connect/google' %>
+    % }
+    </div>
     <h1><%= link_to 'Blog' => 'posts' %></h1>
     %= content
   </body>
