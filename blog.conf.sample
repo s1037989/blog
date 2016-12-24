@@ -1,0 +1,11 @@
+{
+  pg => 'postgresql://blog@%2fvar%2frun%2fpostgresql/blog',
+  secrets => ['s3cret'],
+  oauth2 => {
+    google => {
+      #create an app: https://console.developers.google.com/apis
+      key => 'KEY.apps.googleusercontent.com',
+      secret => 'SECRET',
+    },
+  },
+};

@@ -6,7 +6,7 @@ has 'pg';
 sub add {
   my ($self, $user) = @_;
   my $sql = 'insert into users (email, name) values (?, ?) returning id';
-  return $self->pg->db->query($sql, $post->{email}, $post->{name})->hash->{id};
+  return $self->pg->db->query($sql, $user->{email}, $user->{name})->hash->{id};
 }
 
 sub all { shift->pg->db->query('select * from users')->hashes->to_array }
